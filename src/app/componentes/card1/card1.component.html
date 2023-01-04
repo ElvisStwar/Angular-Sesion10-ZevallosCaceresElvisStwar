@@ -1,13 +1,13 @@
 <div class="border">
     <div class="p-2">
         <div class="mb-2">
-            <input type="text" class="form-control" placeholder="Nombre de tarea">
+            <input type="text" class="form-control" placeholder="Nombre de tarea" #nombreTarea>
         </div>
         <div class="mb-2">
-            <textarea name="" id="" cols="30" rows="10" class="form-control" placeholder="Descripción de tarea"></textarea>
+            <textarea name="" id="" cols="30" rows="10" class="form-control" placeholder="Descripción de tarea" #desTarea></textarea>
         </div>
         <div>
-            <button class="btn btn-primary">Guardar</button>
+            <button class="btn btn-primary" (click)="guardar(nombreTarea.value)">Guardar</button>
         </div>
     </div>
 </div>

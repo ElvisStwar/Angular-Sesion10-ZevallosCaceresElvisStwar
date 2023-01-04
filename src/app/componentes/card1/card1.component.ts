@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-card1',
@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./card1.component.css']
 })
 export class Card1Component {
+
+  @Output() recibir =new EventEmitter<object>()
+
+  dataTareas: any[] = [];
+  guardar(nombreTarea:string){
+    this.dataTareas.push(nombreTarea)
+    this.recibir.emit(this.dataTareas);
+    console.log(this.dataTareas)
+  }
 
 }
